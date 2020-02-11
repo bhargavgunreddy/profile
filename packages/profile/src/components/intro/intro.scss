@@ -1,0 +1,25 @@
+
+
+.intro{
+	height: 30%;
+	width:80%;
+	display: flex;
+	justify-content: space-between	;
+	align-items: center;
+
+	border: 1px solid green;
+	font-weight: bold;
+    font-family: fantasy;
+    padding: 0 5%;
+    box-sizing: border-box;
+
+    img{
+    height: 25%;
+    }
+
+    p{
+    padding: 0 2%;
+    word-break: break-all;
+    }
+
+}

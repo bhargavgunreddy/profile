@@ -1,26 +1,33 @@
 import React from 'react';
 import './layout.scss';
+import { Navbar } from './../navbar/navbar';
+import { TimeNow } from './../time/time';
+import { Intro } from './../intro/intro';
+
+
 
 function Layout() {
+
+const listItemsRef = [
+                    {'listItemName': 'PROFILE'},
+                    {'listItemName': 'CAREER'},
+                    {'listItemName': 'PROJECTS'},
+                    {'listItemName': 'HOBBIES'},
+                    {'listItemName': 'CONTACT'}
+                 ];
+
   return (
     <div className="layout">
       <header className="header">
-        Time now 67:23
+        <TimeNow/>
       </header>
       <section className="main-content">
-        <nav className="navigation">
-          <a>First</a>
-          <a>Second</a>
-          <a>Third</a>
-          <a>Fourth</a>
-          <a>Fifth</a>
-        </nav>
+
+        <Navbar listItems = {listItemsRef}/>
         <div className="carousel">
-          <img alt="Image to display"></img>
+          <img className= "image" src="./mypic.jpg" alt="Image to display"></img>
         </div>
-        <section className="intro">
-          INtro
-        </section>
+       <Intro/>
 
       </section>
       <footer className="footer">

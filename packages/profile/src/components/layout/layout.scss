@@ -9,9 +9,10 @@ background-color: orange;
 
 .header{
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-end;
 	align-items: center;
 	height:8%;
+	padding: 0 1%;
 		border: 1px solid red;
 		/*background-color: red;*/
 
@@ -29,7 +30,7 @@ background-color: orange;
 
 
 
-	.navigation{
+	.nav-list{
 		height: 10%;
 		width: 100%;	
 		display:flex;
@@ -38,9 +39,10 @@ background-color: orange;
 		justify-content: flex-end;
 		border: 1px solid yellow;
 		/*background-color: yellow;*/
+		list-style-type:none;
+		padding: 0 1%;
 
-
-		a{
+		li{
 			width: 10%;
 		}
 	}
@@ -54,18 +56,12 @@ background-color: orange;
 		border: 1px solid green;
 		/*background-color: green;*/
 
+		img{
+		height: 80%;
+		}
 
 	}
-	.intro{
-		height: 30%;
-		width:80%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-
-		border: 1px solid green;
-
-	}
+	
 
 }
 
