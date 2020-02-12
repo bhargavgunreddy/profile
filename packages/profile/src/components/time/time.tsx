@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './time.scss';
+import {ThemeContext} from './../layout/layout'
 
 export const TimeNow:React.FC = ()=>{
 
@@ -7,9 +8,11 @@ export const TimeNow:React.FC = ()=>{
 		return Date();
 	}
 
+	const themeLabel = useContext(ThemeContext);
+
 	return (
 		<div>
-			Time now: {dateNow()}
+			{themeLabel}{dateNow()}
 		</div>
 		)
 }

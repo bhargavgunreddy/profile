@@ -1,6 +1,8 @@
 
-import React from 'react';
+import React , { useContext }from 'react';
 import './navbar.scss';
+import {TimeNow} from './../time/time';
+import {ThemeContext} from './../layout/layout'
 
 
 export interface IListItem {
@@ -20,12 +22,16 @@ export const Navbar= (props:INavbarprops)=>{
 		 return	<li className="list-item">{listItem.listItemName}</li>
 		});
 	}
+		const themeLabel = useContext(ThemeContext);
+
 
 return (
 	props.listItems && props.listItems.length > 0 ? 
-		(<ul className="nav-list">
-		{buildNavList()}
-		</ul>) : <div> No Items found</div>
+		(
+			<ul className="nav-list">
+				{buildNavList()}
+			</ul>
+		) : <div> No Items found</div>
 
 	)
 }
