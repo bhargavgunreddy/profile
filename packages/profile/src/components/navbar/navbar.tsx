@@ -1,9 +1,7 @@
 
-import React , { useContext }from 'react';
+import React, {useContext, useEffect} from 'react';
 import './navbar.scss';
-import {TimeNow} from './../time/time';
-import {ThemeContext} from './../layout/layout'
-
+import {ListContext} from './../main/main'
 
 export interface IListItem {
 	listItemName: string;
@@ -14,19 +12,25 @@ export interface INavbarprops {
 	listItems: IListItem[];
 }
 
-export const Navbar= (props:INavbarprops)=>{
+export const Navbar= (props:any)=>{
+
+	let items:any = useContext(ListContext);
+	let looper:any = null;
+
+
+// console.log(items);
+ looper = props && props.listItems? props.listItems:items.listItemsRef;
 
 	const buildNavList = ()=>{
-		return props!.listItems.map((listItem)=>
+		return looper.map((listItem:any)=>
 		{
 		 return	<li className="list-item">{listItem.listItemName}</li>
 		});
 	}
-		const themeLabel = useContext(ThemeContext);
 
 
 return (
-	props.listItems && props.listItems.length > 0 ? 
+	looper && looper.length > 0 ? 
 		(
 			<ul className="nav-list">
 				{buildNavList()}

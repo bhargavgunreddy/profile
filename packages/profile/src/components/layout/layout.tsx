@@ -1,34 +1,35 @@
-import React , { createContext }from 'react';
+import React , { createContext , useContext}from 'react';
 import './layout.scss';
-import { Navbar } from './../navbar/navbar';
-import { TimeNow } from './../time/time';
+import { Navbar,INavbarprops } from './../navbar/navbar';
 import { Intro } from './../intro/intro';
+import {WeatherComp} from './../weather/weather';
+import {ListContext} from './../main/main';
+
+
 
  const ThemeContext = createContext({  });
 
 
 
+
 function Layout() {
   const timeLabel ="Time now:";
-const listItemsRef = [
-                    {'listItemName': 'PROFILE'},
-                    {'listItemName': 'CAREER'},
-                    {'listItemName': 'PROJECTS'},
-                    {'listItemName': 'HOBBIES'},
-                    {'listItemName': 'CONTACT'}
-                 ];
+
+let list:any = useContext(ListContext);
+console.log(list);
+
 
   return (
     <div className="layout">
     <ThemeContext.Provider value={timeLabel}>
       <header className="header">
-        <TimeNow />
+      <WeatherComp/>
       </header>
       <section className="main-content">
 
-        <Navbar listItems = {listItemsRef}/>
+        <Navbar listItems = {list.listItemsRef}/>
         <div className="carousel">
-          <img className= "image" src="./mypic.jpg" alt="Image to display"></img>
+          <img className= "image" src="./mypic.jpg" alt=" my display"></img>
         </div>
        <Intro/>
 
