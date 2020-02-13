@@ -4,6 +4,7 @@ import { Navbar,INavbarprops } from './../navbar/navbar';
 import { Intro } from './../intro/intro';
 import {WeatherComp} from './../weather/weather';
 import {ListContext} from './../main/main';
+import {Carousel} from './../carousel/carousel';
 
 
 
@@ -16,7 +17,6 @@ function Layout() {
   const timeLabel ="Time now:";
 
 let list:any = useContext(ListContext);
-console.log(list);
 
 
   return (
@@ -28,9 +28,7 @@ console.log(list);
       <section className="main-content">
 
         <Navbar listItems = {list.listItemsRef}/>
-        <div className="carousel">
-          <img className= "image" src="./mypic.jpg" alt=" my display"></img>
-        </div>
+        <Carousel/>
        <Intro/>
 
       </section>
