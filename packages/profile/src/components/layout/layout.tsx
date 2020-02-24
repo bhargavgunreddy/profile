@@ -1,11 +1,14 @@
 import React , { createContext , useContext}from 'react';
 import './layout.scss';
 import { Navbar,INavbarprops } from './../navbar/navbar';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
+
 import { Intro } from './../intro/intro';
 import {WeatherComp} from './../weather/weather';
 import {ListContext} from './../main/main';
 import {Carousel} from './../carousel/carousel';
-
+import {Profile} from './../profile/profile';
+import {Project} from './../project/project';
 
 
  const ThemeContext = createContext({  });
@@ -28,8 +31,14 @@ let list:any = useContext(ListContext);
       <section className="main-content">
 
         <Navbar listItems = {list.listItemsRef}/>
-        <Carousel/>
-       <Intro/>
+     
+       <div className="content-space">
+           <Route path="/CAREER" component={Carousel}/>
+            <Route path="/HOBBIES" component={Intro}/>
+            <Route path="/PROFILE" component={Profile}/>
+            <Route path="/PROJECTS" component={Project}/>
+
+       </div>
 
       </section>
       <footer className="footer">

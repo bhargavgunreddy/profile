@@ -30,6 +30,11 @@ background-color: #b6ccb1;
 	
 	@import './../navbar/navbar.scss';
 	@import './../carousel/carousel.scss';
+
+	.content-space{
+		width: 80%;
+    height: 80%;
+	}
 	
 
 }

@@ -25,8 +25,7 @@ export const Main = () => {
   
 		<Switch>
 		<ListContext.Provider value={valueList}>
-			<Route exact path="/" component={App}/>
-			<Route path="/weather" component={Navbar}/>
+			<App/>
 		</ListContext.Provider>
 		</Switch>
 		</BrowserRouter>

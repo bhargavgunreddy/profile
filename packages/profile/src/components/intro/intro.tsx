@@ -8,10 +8,19 @@ export const Intro:React.FC = () =>{
 		<section className="intro">
 		<img src="./react_hooks_2.png" alt="React hooks"/>
  			<p className="text">
+        <section>
           		I am a front end engineer with experstise on Javascript frameworks. 
           		My experience spans React, Angular, Ember, VanillaJS. Been a while i have worked
           		on React, so started this as a pet project to learn React hooks. 
-        	</p>
+        	</section>
+          <section>
+            <ul>
+              <li>1. Font used is Trochhi</li>
+            <li>2. Used Context to pass the navlinks in min componnets and use them in Layout componnets</li>
+            <li>3. Used React router to navigate through links</li>
+</ul>
+          </section>
+          </p>
         <img src="./react_hooks_3.png" alt="React hooks"/>
         </section>
 

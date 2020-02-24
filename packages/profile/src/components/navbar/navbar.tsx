@@ -1,5 +1,11 @@
 
 import React, {useContext, useEffect} from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  NavLink
+} from "react-router-dom";
 import './navbar.scss';
 import {ListContext} from './../main/main'
 
@@ -24,7 +30,10 @@ export const Navbar= (props:any)=>{
 	const buildNavList = ()=>{
 		return looper.map((listItem:any)=>
 		{
-		 return	<li className="list-item">{listItem.listItemName}</li>
+			let refWord = listItem.listItemName;
+		 return	<li className="list-item">
+		 			<NavLink to={"/"+refWord}>{refWord}</NavLink>
+	 			</li>
 		});
 	}
 

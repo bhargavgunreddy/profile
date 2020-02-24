@@ -7,7 +7,7 @@ export const Profile= ()=>{
 
 	
 return (
-	<div>
+	<>
 		<table>
 			<thead>
 				<tr>
@@ -28,7 +28,7 @@ return (
 
 
 		</table>
-	</div>
+	</>
 	)
 }
 
