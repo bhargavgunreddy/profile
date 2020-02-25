@@ -26,11 +26,10 @@ let list:any = useContext(ListContext);
     <div className="layout">
     <ThemeContext.Provider value={timeLabel}>
       <header className="header">
-      <WeatherComp/>
-      </header>
+     </header>
       <section className="main-content">
-
-        <Navbar listItems = {list.listItemsRef}/>
+<Navbar listItems = {list.listItemsRef}/>  
+       
      
        <div className="content-space">
            <Route path="/CAREER" component={Carousel}/>
