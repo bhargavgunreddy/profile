@@ -1,8 +1,5 @@
 import React, {createContext} from 'react';	
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
-
-import {WeatherComp} from './../weather/weather';
-import {Navbar} from './../navbar/navbar';
+import {BrowserRouter	, Switch} from 'react-router-dom';
 
 
 import App from './../../App';

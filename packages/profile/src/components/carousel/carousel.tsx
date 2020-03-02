@@ -1,7 +1,4 @@
 	import React, {useEffect, useState} from 'react'
-	import { render } from 'react-dom'
-	import { BrowserRouter } from 'react-router-dom'
-	import { Main } from './../main/main';
 
 	const axios = require('axios');
 
@@ -18,21 +15,13 @@
 		  }
 		};
 
-		let imagesFull:boolean = false;
 		let [images, setImages] = useState([]);
 		let [activeImg, setActiveImg] = useState();
 		let [activeIndex, setActiveIndex] = useState();
 
-
-		let setActive = useEffect(()=>{
-				setActiveImg(images[0]);
-				setActiveIndex(0)
-		},[images.length])
-
-		let popoulate =  useEffect(()=>{
+		 useEffect(()=>{
 			axios(options).then((response:any) => {
 				setImages(response.data);
-				imagesFull = true;
 			})
 			  .catch((error:any) => {
 				props = []

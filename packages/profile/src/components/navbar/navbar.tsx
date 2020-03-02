@@ -1,9 +1,6 @@
 
-import React, {useContext, useEffect} from 'react';
+import React, {useContext} from 'react';
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
   NavLink
 } from "react-router-dom";
 import './navbar.scss';
@@ -28,10 +25,10 @@ export const Navbar= (props:any)=>{
  looper = props && props.listItems? props.listItems:items.listItemsRef;
 
 	const buildNavList = ()=>{
-		return looper.map((listItem:any)=>
+		return looper.map((listItem:any, index:number)=>
 		{
 			let refWord = listItem.listItemName;
-		 return	<li className="list-item">
+		 return	<li className="list-item" key={'listItem-'+index}>
 		 			<NavLink to={"/"+refWord}>{refWord}</NavLink>
 	 			</li>
 		});
