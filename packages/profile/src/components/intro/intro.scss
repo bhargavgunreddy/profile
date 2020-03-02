@@ -1,10 +1,9 @@
 
+@import './../layout/_common.scss';
 
 .intro{
 
 	height: 80%;
-	
-	
 	justify-content: space-between	;
 	align-items: center;
     flex: 1 4 1;
@@ -14,12 +13,13 @@
     box-sizing: border-box;
 
     img{
-    height: 25%;
+        @include image-defaults;
+        height: 25%;
     }
 
     p{
-    padding: 0 2%;
-    word-break: break-all;
+        padding: 0 2%;
+        word-break: break-all;
     }
 
 }

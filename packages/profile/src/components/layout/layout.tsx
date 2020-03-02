@@ -25,8 +25,7 @@ let list:any = useContext(ListContext);
   return (
     <div className="layout">
     <ThemeContext.Provider value={timeLabel}>
-      <header className="header">
-     </header>
+      
       <section className="main-content">
 <Navbar listItems = {list.listItemsRef}/>  
        

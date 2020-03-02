@@ -24,6 +24,7 @@ module.exports = {
         "@typescript-eslint"
     ],
     "rules": {
-         "@typescript-eslint/no-unused-vars": ["error"]
+         "@typescript-eslint/no-unused-vars": ["error"],
+         "indent": ["error", 4, { "flatTernaryExpressions": false }]
     }
 };
