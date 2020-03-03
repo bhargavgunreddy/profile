@@ -8,6 +8,10 @@ import {ListContext} from './../main/main';
 import {Carousel} from './../carousel/carousel';
 import {Profile} from './../profile/profile';
 import {Project} from './../project/project';
+import {ProjectMap} from './../project-map/project-map';
+import {ContextSwitch} from './../theme-switcher/theme-switch';
+
+
 
 
  const ThemeContext = createContext({  });
@@ -31,7 +35,7 @@ let list:any = useContext(ListContext);
            <Route path="/CAREER" component={Carousel}/>
             <Route path="/HOBBIES" component={Intro}/>
             <Route path="/PROFILE" component={Profile}/>
-            <Route path="/PROJECTS" component={Project}/>
+            <Route path="/PROJECTS" component={ProjectMap}/>
 
        </div>
 

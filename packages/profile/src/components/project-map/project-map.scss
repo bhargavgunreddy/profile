@@ -1,0 +1,67 @@
+@import './../layout/common';
+
+
+@keyframes slide-in{
+
+
+}
+@keyframes increase {
+		10%{
+            height: 10px;
+		}
+		
+		50%{
+            height: 20px;
+		}
+
+        100% {
+            height: 40px;
+        }
+    }
+
+
+.project-sections{
+	width: 90%;
+	height: 90%;
+	max-width: 96%;
+	max-height: 94%;
+	display:flex;
+	flex-direction: column;
+
+	.project-section{
+		
+	    width: 60%;
+	    height: 40%;
+	    max-width: 90%;
+	    max-height: 80%;
+	    border-radius: 30px;
+	    @include def-border;
+	    animation: 1s fade-in;
+
+	    &.no-border{
+	    	// animation-name: increase;
+	    	//animation-duration: 3s;
+	    	 @include no-border;
+	    }
+
+	    &.align-left{
+	    	 align-self : flex-end;
+	    }
+
+	    &.align-right{
+	    	 align-self : flex-start;
+	    }
+
+	    ul{
+	    	list-style-type: none;
+	    }
+	}
+
+	.project-separator{
+		
+		animation: increase;
+		animation-duration:1s;
+	}
+
+
+}

@@ -1,5 +1,14 @@
 @mixin image-defaults{
-			height: 80%;
-			max-height: 90%;
-			max-width: 90%;
-			}
+	height: 80%;
+	max-height: 90%;
+	max-width: 90%;
+	}
+
+@mixin def-border{
+	border: 1px solid lightgray;
+}
+
+@mixin no-border{
+	border: none !important;
+}
+

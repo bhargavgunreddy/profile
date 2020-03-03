@@ -1,0 +1,42 @@
+.bg-black{
+	background-color: black;
+}
+
+.bg-white{
+	background-color: white;
+}
+
+.fl-none{
+	float:none;
+}
+
+.fl-right{
+	float:right;
+}
+
+.slider{
+	width: 25px;
+	height:25px;
+}
+
+.switch{
+	border: 1px solid green;
+    width: 60px;
+    height: 34px;
+    border-radius: 30px;
+
+    .switch-btn{
+    	width: 30px;
+    	height: 20px;
+    	    border-radius: 30px;
+
+    }
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
