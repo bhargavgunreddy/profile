@@ -37,6 +37,7 @@
 	    border-radius: 30px;
 	    @include def-border;
 	    animation: 1s fade-in;
+	    margin-bottom: 4%;
 
 	    &.no-border{
 	    	// animation-name: increase;
@@ -54,6 +55,9 @@
 
 	    ul{
 	    	list-style-type: none;
+	    	li:before {
+		 		content: "\00BB";
+	     	}
 	    }
 	}
 
