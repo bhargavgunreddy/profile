@@ -1,0 +1,93 @@
+
+
+.slider-section{
+	//width: 90%;
+
+	.slider-label{
+		display: flex;
+		align-items:center;
+		height: 100%;
+
+	}
+	
+	.proficient{
+		//width: 80%;
+		height: 5%;
+}
+}
+
+.green-text{
+	color: orange;
+}
+
+.orange-text{
+	color: green;
+}
+
+@keyframes sliderA {
+	
+	0% {width: 5%; 		background-color: orange;
+}
+	100%{ width: 45%;
+		background-color: lightgreen;
+		color: purple;
+	}
+}
+
+@keyframes slide {
+	from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(50%);
+  }
+}
+
+
+@keyframes sliderB {
+	0% {
+		width: 5%; 
+		background-color: orange;
+
+		}
+	100%{ 
+		width: 75%;
+		background-color: green;
+		color: yellow;
+		}
+}
+
+// .proficient{
+// 	animation: 3s sliderA;
+// }
+
+.slider-section {
+	height: 30%;	
+	border-radius: 5px;
+	align-self: center;
+
+	.slider-label{
+
+	}
+
+	span{
+		display: flex;	
+		align-self: center;
+		justify-content: center;
+	}
+}
+
+.pro-slider-section{
+	animation-name: sliderB;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+
+}
+
+.avg-slider-section{
+	animation-name: sliderA;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+

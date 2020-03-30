@@ -1,3 +1,44 @@
+
+.right-rotate{
+	transform: rotate(10deg);
+}
+
+.left-rotate{
+	transform: rotate(-10deg);
+}
+
+.profile-section{
+	display: flex;
+	flex-direction: row;
+	width: 90%;
+	height: 100%;
+}
+
+.icons{
+	display: flex;
+	flex-direction: column;
+	width: 85%;
+	height: 100%;
+	margin: 1%;
+
+	.icon{
+		width: 90%;
+		// height: 20%;
+	}
+}
+
+.combo{
+	display: flex;
+	height: 20%;
+	width: 90%;
+
+	.icon{
+		width: 13%;
+		height: 70%;
+	}
+}
+
+
 table {
 
 width: 80%;
