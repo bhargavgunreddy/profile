@@ -31,7 +31,6 @@ export const Slider = (props:any) => {
 	}
 
 	let sliderLabel = getLabel();
-	// let className = props.type == 'pro' ? 'pro-slider-section' : 'avg-slider-section';
 	let className = getSliderClass() ;
 
 
