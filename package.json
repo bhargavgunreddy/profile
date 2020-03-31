@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "babel-eslint": "^10.1.0",
     "global": "^4.4.0",
     "sass": "^1.26.2",
     "typescript": "^3.8.3"
