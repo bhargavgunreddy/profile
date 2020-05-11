@@ -1,39 +1,41 @@
-import React , { createContext , useContext}from 'react';
+/* eslint-disable import/extensions */
+/* eslint-disable react/jsx-filename-extension */
+import React, { createContext, useContext } from 'react';
 import './layout.scss';
-import { Navbar } from './../navbar/navbar';
-import { Route} from 'react-router-dom';
+import { Route } from 'react-router-dom';
+import { Navbar } from '../navbar/navbar';
 
-import { Intro } from './../intro/intro';
-import {ListContext} from './../main/main';
-import {Carousel} from './../carousel/carousel';
-import {Profile} from './../profile/profile';
-import {ProjectMap} from './../project-map/project-map';
-//import {ContextSwitch} from './../theme-switcher/theme-switch';
+import { Intro } from '../intro/intro';
+import { ListContext } from '../main/main';
+import { Carousel } from '../carousel/carousel';
+import { Profile } from '../profile/profile';
+import { ProjectMap } from '../project-map/project-map';
+// import {ContextSwitch} from './../theme-switcher/theme-switch';
 
 
- const ThemeContext = createContext({  });
+const ThemeContext = createContext({ });
 
 
 function Layout() {
-  const timeLabel ="Time now:";
+  const timeLabel = 'Time now:';
 
-let list:any = useContext(ListContext);
+  const list:any = useContext(ListContext);
 
 
   return (
     <div className="layout">
       <ThemeContext.Provider value={timeLabel}>
-        
-        <section className="main-content">
-          <Navbar listItems = {list.listItemsRef}/>     
-       
-           <div className="content-space">
-             <Route path="/CAREER" component={Carousel}/>
-              <Route path="/HOBBIES" component={Intro}/>
-              <Route path="/PROFILE" component={Profile}/>
-              <Route path="/PROJECTS" component={ProjectMap}/>
 
-           </div>
+        <section className="main-content">
+          <Navbar listItems={list.listItemsRef} />
+
+          <div className="content-space">
+            <Route path="/CAREER" component={Carousel} />
+            <Route path="/HOBBIES" component={Intro} />
+            <Route path="/PROFILE" component={Profile} />
+            <Route path="/PROJECTS" component={ProjectMap} />
+
+          </div>
 
         </section>
         <footer className="footer">
@@ -45,5 +47,4 @@ let list:any = useContext(ListContext);
 }
 
 
-
-export { Layout, ThemeContext};
+export { Layout, ThemeContext };
